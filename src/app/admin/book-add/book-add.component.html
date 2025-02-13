@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="add-new-book-wrapper">
+    <h2>Thêm sách mới</h2>
+    <div class="row">
+      <div class="input-text-wrapper">
+        <div class="category-item">
+          <label>Loại sách:</label>
+          <div class="categories-wrapper">
+            <ng-select
+              [items]="categories"
+              bindLabel="name"
+              appendTo="body"
+              [multiple]="true"
+              [(ngModel)]="selected">
+            </ng-select>
+          </div>
+        </div>
+        <form [formGroup]="bookForm" (ngSubmit)="addNewBook()">
+          <div class="add-book-item">
+            <label>Tên sách:</label>
+            <input type="text" formControlName="name">
+          </div>
+          <div class="add-book-item">
+            <label>Tác giả:</label>
+            <input type="text" formControlName="author">
+          </div>
+          <div class="add-book-item">
+            <label>Giá cả:</label>
+            <input type="text" formControlName="price">
+          </div>
+          <div class="add-book-item">
+            <label>Số lượng:</label>
+            <input type="text" formControlName="quantity">
+          </div>
+          <div class="add-book-item">
+            <label>Mô tả:</label>
+            <input type="text" formControlName="description">
+          </div>
+          <button type="submit" class="saveBtn">
+            Lưu
+          </button>
+          <a ><i class='bx bx-arrow-back' routerLink="/admin/book/list" ></i> <span routerLink="/admin/book/list">Quay lại trang danh sách</span></a>
+        </form>
+      </div>
+      <div class="image-wrapper">
+        <label for="fileInput" class="custom-file-upload">Thêm ảnh</label>
+        <input id="fileInput" type="file" style="display:none"(change)="selectImage($event)">
+      </div>
+
+    </div>
+  </div>
+</div>

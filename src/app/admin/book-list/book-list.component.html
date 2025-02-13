@@ -1,0 +1,43 @@
+<div class="container">
+  <app-nav-bar-admin (findByName1)="findByName($event)"></app-nav-bar-admin>
+  <div class="container-wrapper">
+    <app-side-bar-admin class="sidebar-list-component" (findByCategory)="getBookByCategory($event)"
+                                                       (getAllBook)="findByName($event)"></app-side-bar-admin>
+    <div class="content">
+      <h2>{{title}}</h2>
+      <div class="total-record">
+        <p>{{total}} Cnt.</p> <span><i class='bx bx-search'></i></span>
+      </div>
+      <table class="book-table" [hidden]="books.length === 0">
+        <tr class="tr-th">
+          <th>STT</th>
+          <th>Tên sách</th>
+          <th>Thể loại</th>
+          <th>Tác giả</th>
+          <th>Giá bán</th>
+          <th>Số lượng còn lại</th>
+          <th>Số lượng đã bán</th>
+        </tr>
+        <tr *ngFor="let book of books, index as i">
+          <td>{{i + 1}}</td>
+          <td class="book-name" routerLink="/admin/book/detail/{{book.id}}">{{book.name}}</td>
+          <td>{{book.categoryList}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.price}}</td>
+          <td>{{book.quantity}}</td>
+          <td>{{book.salesQuantity}}</td>
+        </tr>
+      </table>
+      <div class="pagination" [hidden]="books.length === 0">
+        <button class="btnPrevious" (click)="previous()" [hidden]="pageNumber === 0">Trang trước</button>
+        <button class="btnOne" (click)="goFirstPage()" [hidden]="pageNumber === 0">1</button>
+        <button class="btnDot"  disabled [hidden]="pageNumber !== lastPage || lastPage <= 1">...</button>
+        <button class="btnCurrent" disabled>{{pageNumber + 1}}</button>
+        <button class="btnDot"  disabled [hidden]="pageNumber === lastPage || lastPage <= 1 || pageNumber === lastPage - 1">...</button>
+        <button class="btnLast" (click)="goLastPage()" [hidden]="pageNumber === lastPage">{{lastPage + 1}}</button>
+        <button class="btnNext" (click)="next()" [hidden]="pageNumber === lastPage">Trang kế</button>
+      </div>
+    </div>
+  </div>
+
+</div>

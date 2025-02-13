@@ -1,0 +1,91 @@
+.container {
+  height: 97vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background: #F0F2F5;
+}
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  width: 400px;
+  height: 375px;
+  background: #fff;
+  border-radius: 10px;
+}
+.form-login {
+  width: 100%;
+}
+.form-item {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.form-item input {
+  width: 360px;
+  height: 50px;
+  outline: none;
+  border: 1px solid #EAEBED;
+  padding: 0 15px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+.form-item input:focus{
+  border: 1px solid #1877F2;
+}
+.loginBtn {
+  width: 98%;
+  height: 50px;
+  font-size: 17px;
+  outline: none;
+  border: none;
+  background: #1877F2;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.loginBtn:hover {
+  background: #166fe5;
+}
+.forgotPasswordLink {
+  text-decoration: none;
+  margin: 15px 0;
+  font-size: 17px;
+  color: #1877f2;
+  font-weight: 400;
+}
+.forgotPasswordLink:hover {
+  text-decoration: underline;
+}
+.hr {
+  border: 1px solid #EAEBED;
+  width: 97%;
+  margin-bottom: 20px;
+}
+.signUpBtn {
+  width: 175px;
+  height: 50px;
+  background: #42b72a;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.signUpBtn:hover{
+  background: #36a420;
+}
+.small {
+  color: red;
+  float: left;
+  margin: 5px;
+  display: none;
+}

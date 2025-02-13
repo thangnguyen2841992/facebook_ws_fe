@@ -1,0 +1,74 @@
+.container{
+}
+.container-wrapper {
+  width: 100%;
+  display: flex;
+}
+.sidebar-list-component {
+  width: 18%;
+  height: 91.5vh
+}
+.content {
+  width: 82%;
+  margin: 10px;
+}
+.content h2 {
+  text-align: center;
+}
+.book-table {
+  width: 100%;
+  text-align: center;
+
+}
+.tr-th {
+  background: #F9BDA6;
+}
+th, td {
+  height: 40px;
+}
+tr:nth-child(odd) td {
+  background: rgb(236,242,248);
+}
+tr:nth-child(even) td {
+  background: #ffffff;
+}
+.book-name {
+  color: #1877f2;
+  cursor: pointer;
+}
+.book-name:hover {
+  color: #166fe5;
+  text-decoration: underline;
+}
+.total-record {
+  display: flex;
+  align-items: center;
+}
+.total-record p {
+  font-size: 14px;
+}
+.total-record span {
+  margin-left: 5px;
+}
+.pagination {
+  text-align: center;
+}
+.pagination button {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+
+  color: black;
+  margin: 10px 0 0 8px;
+}
+.btnPrevious, .btnNext, .btnLast, .btnOne{
+  cursor: pointer;
+}
+.btnPrevious:hover, .btnNext:hover, .btnLast:hover, .btnOne:hover {
+  background: #F9BDA6;
+  text-decoration: underline;
+}
+.btnCurrent {
+  background: #F15C22;
+}

@@ -1,0 +1,119 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 97vh;
+}
+.add-new-book-wrapper {
+  width: 700px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding:0 20px 10px 20px;
+  /*display: flex;*/
+}
+.row {
+  width: 100%;
+  display: flex;
+}
+.input-text-wrapper {
+  width: 400px;
+  flex-direction: column;
+}
+.image-wrapper {
+  width: 300px;
+  height: 35px;
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.image-wrapper label {
+  width: 100px;
+  height: 35px;
+  background: #1877f2;
+  text-align: center;
+  line-height: 35px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.image-wrapper label:hover {
+  background: #166fe5;
+}
+.image-wrapper input {
+  width: 20px;
+}
+.add-new-book-wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+h2  {
+  text-align: center;
+}
+.add-book-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.add-book-item label {
+  width: 25%;
+  font-size: 18px;
+}
+.add-book-item input {
+  width: 75%;
+  height: 40px;
+  border: 1px solid #ccd0d5;
+  border-radius: 10px;
+  padding: 0 15px;
+  font-size: 16px;
+  outline: none;
+}
+.category-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.category-item label {
+  width: 25%;
+  font-weight: 18px;
+}
+.categories-wrapper  {
+  width: 83%;
+}
+.categories-wrapper ng-select {
+  height: 40px;
+  border-radius: 8px;
+}
+.saveBtn {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background: #00a400;
+  color: white;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 55%;
+  margin: 10px auto;
+}
+.saveBtn:hover {
+  background: #36a420;
+}
+.add-new-book-wrapper a {
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+  cursor: pointer;
+  color: #1877f2;
+}
+.add-new-book-wrapper a i {
+  margin-right: 15px;
+  font-weight: bold;
+}
+.add-new-book-wrapper a span:hover {
+  text-decoration: underline;
+}

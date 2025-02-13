@@ -1,0 +1,15 @@
+
+<div class="navbar">
+  <div class="logo-wrapper">
+    <img routerLink="/admin/book/list" src="assets/image/logo-new.png">
+  </div>
+  <div class="search-wrapper">
+    <form [formGroup]="searchForm" (ngSubmit)="emitEvent()">
+      <input type="text" placeholder="Nhập tên tác giả, tên sách cần tìm" formControlName="name">
+      <button type="submit" class="searchBtn"><i class='bx bx-search'></i></button>
+    </form>
+  </div>
+  <div class="user-info-wrapper">
+    <h5>Chào: Admin</h5><span (click)="logout()" class="logout">Log out</span>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="sidebar-wrapper">
+  <div class="sidebar-list">
+    <div class="sidebar-item">
+      <i class='bx bx-plus' routerLink="/admin/book/add"></i>
+      <span routerLink="/admin/book/add">Thêm sách mới</span>
+    </div>
+    <h5 class="category-type">Thể loại</h5>
+    <div  (click)="eventEmit1('')" class="sidebar-item category">
+      <i class='bx bx-wifi-0'></i>
+      <span>Tất cả</span>
+    </div>
+    <div (click)="emitEvent(category)"  class="sidebar-item category" *ngFor="let category of categories">
+      <i class='bx bx-wifi-0'></i>
+      <span>{{category.name}}</span>
+    </div>
+  </div>
+</div>

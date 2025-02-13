@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="login-wrapper">
+    <h2>Đăng nhập vào Facebook</h2>
+    <form class="form-login" [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="form-item">
+        <input class="input-item" type="email" placeholder="Email của bạn" formControlName="email">
+        <small  class="small">Email bạn nhập không đúng.</small>
+      </div>
+      <div class="form-item">
+        <input class="input-item" type="password" placeholder="Mật khẩu" formControlName="password">
+        <small class="small">Mật khẩu bạn nhập không đúng.</small>
+      </div>
+      <button type="submit" class="loginBtn">Đăng nhập</button>
+    </form>
+    <a href="#" class="forgotPasswordLink">Quên mật khẩu?</a>
+    <div class="hr"></div>
+    <button class="signUpBtn" routerLink="/register">Tạo tài khoản mới</button>
+  </div>
+</div>

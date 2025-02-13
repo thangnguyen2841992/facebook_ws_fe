@@ -1,0 +1,47 @@
+<div class="container">
+  <app-nav-bar-admin (findByName1)="goPage($event)"></app-nav-bar-admin>
+  <div class="add-new-book-wrapper">
+    <div class="header">
+      <h2>{{book.name}}</h2>
+      <div class="btn-wrapper">
+        <button routerLink="/admin/book/edit/{{book.id}}" class="btnEdit"><i class='bx bx-edit-alt'></i></button>
+        <button (click)="deleteBook()" class="btnDelete"><i class='bx bx-trash' ></i></button>
+      </div>
+    </div>
+      <div class="row">
+        <div class="input-text-wrapper">
+          <div class="add-book-item">
+            <label>Thể loại:</label>
+            <input type="text" [value]="book.categoryList" disabled>
+          </div>
+          <div class="add-book-item">
+            <label>Tên sách:</label>
+            <input type="text" [value]="book.name" disabled>
+          </div>
+          <div class="add-book-item">
+            <label>Tác giả:</label>
+            <input type="text" [value]="book.author" disabled>
+          </div>
+          <div class="add-book-item">
+            <label>Giá cả:</label>
+            <input type="text" [value]="book.price" disabled>
+          </div>
+          <div class="add-book-item">
+            <label>Số lượng:</label>
+            <input type="text" [value]="book.quantity" disabled>
+          </div>
+          <div class="add-book-item">
+            <label>Mô tả:</label>
+            <input type="text" [value]="book.description" disabled>
+          </div>
+          <a><i class='bx bx-arrow-back' routerLink="/admin/book/list"></i> <span routerLink="/admin/book/list">Quay lại trang danh sách</span></a>
+
+        </div>
+        <div class="image-wrapper">
+          <img src="http://localhost:8080/image/{{book.image}}">
+        </div>
+
+      </div>
+
+    </div>
+  </div>

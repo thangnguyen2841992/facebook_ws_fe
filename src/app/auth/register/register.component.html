@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="register-wrapper">
+    <h1>Đăng ký</h1>
+    <p>Nhanh chóng và dễ dàng</p>
+    <!--               <div class="hr"></div>-->
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="name-wrapper">
+      <div class="name-item">
+        <input type="text" placeholder="Họ" formControlName="firstName" [ngStyle]="{'border': (firstName?.touched && firstName?.errors?.['required']) ? '1px solid red' : '1px solid #ccd0d5'}">
+        <span class="validate-icon" *ngIf="firstName?.touched && firstName?.errors?.['required']"><i class='bx bxs-error-circle' ></i></span>
+      </div>
+      <div class="name-item">
+        <input type="text" placeholder="Tên" formControlName="lastName" [ngStyle]="{'border': (lastName?.touched && lastName?.errors?.['required']) ? '1px solid red' : '1px solid #ccd0d5'}">
+        <span class="validate-icon" *ngIf="lastName?.touched && lastName?.errors?.['required']"><i class='bx bxs-error-circle'></i></span>
+      </div>
+    </div>
+    <div class="email-wrapper">
+      <input type="email" placeholder="Email" formControlName="email" [ngStyle]="{'border': (email?.touched && (email?.errors?.['required'] || email?.errors?.['email'])) ? '1px solid red' : '1px solid #ccd0d5'}">
+      <span class="validate-icon" *ngIf="email?.touched && (email?.errors?.['required'] || email?.errors?.['email'])"><i class='bx bxs-error-circle'></i></span>
+
+    </div>
+    <div class="password-wrapper">
+      <input type="password" placeholder="Mật khẩu" formControlName="password" [ngStyle]="{'border': (password?.touched && (password?.errors?.['required'] || password?.errors?.['pattern'])) ? '1px solid red' : '1px solid #ccd0d5'}">
+      <span class="validate-icon"><i class='bx bxs-error-circle'  *ngIf="password?.touched && (password?.errors?.['required'] || password?.errors?.['pattern'])"></i></span>
+    </div>
+    <div class="birthday-wrapper">
+      <label>Ngày sinh <i class='bx bxs-help-circle'></i></label>
+      <input type="date" formControlName="dateOfBirth">
+    </div>
+    <label class="label-gender">Giới tính <i class='bx bxs-help-circle'></i></label>
+    <div class="gender-wrapper">
+      <div class="gender-item">
+        <label for="male">Nam</label>
+        <input name="gender" type="radio" id="male" value="male" formControlName="gender">
+      </div>
+      <div class="gender-item">
+        <label for="female">Nữ</label>
+        <input name="gender" type="radio" id="female" value="female" formControlName="gender">
+      </div>
+    </div>
+    <button type="submit" class="saveBtn">Đăng ký</button>
+    </form>
+    <a class="linkLogin">Bạn đã có tài khoản? Đăng nhập ngay.</a>
+  </div>
+</div>
